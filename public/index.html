@@ -3,17 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <title>Krish ❤️ Sara</title>
+
   <style>
     body {
       margin: 0;
       background: black;
       color: white;
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
       text-align: center;
       overflow-x: hidden;
     }
-    h1 { color: #ff4d6d; }
-    .container { padding: 40px 20px; }
+
+    h1 {
+      color: #ff4d6d;
+    }
+
+    .container {
+      padding: 40px 20px;
+    }
+
     img {
       width: 80%;
       max-width: 400px;
@@ -21,36 +29,52 @@
       margin: 20px 0;
       box-shadow: 0 0 20px #ff4d6d;
     }
+
     .heart {
       position: fixed;
       color: pink;
       font-size: 20px;
-      animation: float 5s infinite;
+      animation: float 5s linear forwards;
+      pointer-events: none;
     }
+
     @keyframes float {
-      from { transform: translateY(100vh); opacity: 1; }
-      to { transform: translateY(-10vh); opacity: 0; }
+      from {
+        transform: translateY(100vh);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-10vh);
+        opacity: 0;
+      }
     }
   </style>
 </head>
+
 <body>
 
+<!-- 🎵 Background Music -->
 <audio id="bg-music" loop>
   <source src="Perfect.mp3" type="audio/mpeg">
 </audio>
 
 <script>
+  // Play music ONCE after first click (GitHub-safe)
   document.addEventListener("click", () => {
     document.getElementById("bg-music").play();
-  });
+  }, { once: true });
 
+  // Floating hearts
   setInterval(() => {
     const heart = document.createElement("div");
     heart.className = "heart";
     heart.innerHTML = "💘";
     heart.style.left = Math.random() * 100 + "vw";
     document.body.appendChild(heart);
-    setTimeout(() => heart.remove(), 5000);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
   }, 300);
 </script>
 
@@ -60,12 +84,12 @@
   <p>
     To my sweetest Beby<br>
     From your Sweetest Boy Krishu 💘<br>
-    A sweet effort from Me
+    A sweet effort from me
   </p>
 
   <p>
     Happy Purpose Day 🌹<br>
-    Will you be Mine Valentine?
+    Will you be my Valentine?
   </p>
 
   <p>
@@ -73,7 +97,7 @@
     ≈ 17,088 hours<br>
     ≈ 1,025,280 minutes<br>
     ≈ 61,516,800 seconds<br>
-    Nepali date: 2080/11/13
+    Nepali date: <b>2080/11/14</b>
   </p>
 
   <img src="photos/photo_1.jpg">

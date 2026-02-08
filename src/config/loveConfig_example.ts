@@ -45,7 +45,7 @@ export const loveConfig = {
   milestones: [
     {
       title: "The Beginning",
-      date: "2080/11/13",
+      date: "2080/11/14",
       description: "The day my heart chose you forever."
     },
     {
